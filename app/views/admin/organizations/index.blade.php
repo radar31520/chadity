@@ -5,9 +5,9 @@
 {{{ $title }}} :: @parent
 @stop
 
-@section('keywords')advertisers administration @stop
+@section('keywords')organization administration @stop
 @section('author')Duane Carver @stop
-@section('description')advertisers administration index @stop
+@section('description')organization administration index @stop
 
 {{-- Content --}}
 @section('content')
@@ -17,17 +17,17 @@
 
 
             <div class="pull-right">
-                <a href="{{{ URL::to('admin/advertisers/create') }}}" class="btn btn-small btn-info iframe"><i class="icon-plus-sign icon-white"></i> Create</a>
+                <a href="{{{ URL::to('admin/organizations/create') }}}" class="btn btn-small btn-info iframe"><i class="icon-plus-sign icon-white"></i> Create</a>
             </div>
         </h3>
     </div>
 
-    <table id="advertisers" class="table table-bordered table-hover">
+    <table id="organizations" class="table table-bordered table-hover">
         <thead>
           <tr>
-                <th class="span8">{{{ Lang::get('admin/advertisers/table.name') }}}</th>
-                <th class="span8">{{{ Lang::get('admin/advertisers/table.description') }}}</th>
-                <th class="span2">{{{ Lang::get('admin/advertisers/table.created_at') }}}</th>
+                <th class="span8">{{{ Lang::get('admin/organizations/table.name') }}}</th>
+                <th class="span8">{{{ Lang::get('admin/organizations/table.description') }}}</th>
+                <th class="span2">{{{ Lang::get('admin/organizations/table.created_at') }}}</th>
                 <th class="span2">{{{ Lang::get('table.actions') }}}</th>
             </tr> 
         </thead>
@@ -41,7 +41,7 @@
     <script type="text/javascript">
         var oTable;
         $(document).ready(function() {
-            oTable = $('#advertisers').dataTable( {
+            oTable = $('#organizations').dataTable( {
                 "sDom": "<'row'<'span6'l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
                 "sPaginationType": "bootstrap",
                 "oLanguage": {
@@ -49,7 +49,7 @@
                 },
                 "bProcessing": true,
                 "bServerSide": true,
-                "sAjaxSource": "{{ URL::to('admin/advertisers/data') }}",
+                "sAjaxSource": "{{ URL::to('admin/organizations/data') }}",
                 "fnDrawCallback": function ( oSettings ) {
                     $(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
                 }

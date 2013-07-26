@@ -336,7 +336,7 @@ class Application extends Container implements HttpKernelInterface, ResponsePrep
     }
     public static function getBootstrapFile()
     {
-        return '/Users/ND/Desktop/projects/php/charity/vendor/laravel/framework/src/Illuminate/Foundation' . '/start.php';
+        return '/Users/ND/Desktop/projects/php/sites/chadity/vendor/laravel/framework/src/Illuminate/Foundation' . '/start.php';
     }
     public function startExceptionHandling()
     {
@@ -9980,7 +9980,7 @@ class PrettyPageHandler extends Handler
             return Handler::DONE;
         }
         if (!($resources = $this->getResourcesPath())) {
-            $resources = '/Users/ND/Desktop/projects/php/charity/vendor/filp/whoops/src/Whoops/Handler' . '/../Resources';
+            $resources = '/Users/ND/Desktop/projects/php/sites/chadity/vendor/filp/whoops/src/Whoops/Handler' . '/../Resources';
         }
         $templateFile = "{$resources}/pretty-template.php";
         $cssFile = "{$resources}/pretty-page.css";

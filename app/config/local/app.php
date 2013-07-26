@@ -2,7 +2,7 @@
 
 return array(
 
-    'url' => 'http://localhost:8888/charity/public',
+    'url' => 'http://localhost',
 
     'timezone' => 'UTC',
 

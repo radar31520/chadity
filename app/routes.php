@@ -22,6 +22,7 @@ Route::model('role', 'Role');
 Route::model('advertiser', 'Advertiser');
 Route::model('type', 'Type');
 Route::model('ad', 'Ad');
+Route::model('organization', 'Organization');
 
 /** ------------------------------------------
  *  Admin Routes
@@ -119,6 +120,19 @@ Route::group(array('prefix' => 'admin', 'before' => 'auth'), function()
         ->where('ad', '[0-9]+');
     Route::controller('ads', 'AdminAdsController');
 
+    # Organizations  Management
+    Route::get('organizations/{organization}/show', 'AdminOrganizationsController@getShow')
+        ->where('organization', '[0-9]+');
+    Route::get('organizations/{organization}/edit', 'AdminOrganizationsController@getEdit')
+        ->where('organization', '[0-9]+');
+    Route::post('organizations/{organization}/edit', 'AdminOrganizationsController@postEdit')
+        ->where('organization', '[0-9]+');
+    Route::get('organizations/{organization}/delete', 'AdminOrganizationsController@getDelete')
+        ->where('organization', '[0-9]+');
+    Route::post('organizations/{organization}/delete', 'AdminOrganizationsController@postDelete')
+        ->where('organization', '[0-9]+');
+    Route::controller('organizations', 'AdminOrganizationsController');
+
     #For use cases involving successful deletion of a database record
       # Admin Dashboard
     Route::get('successful-delete', 'AdminDashboardController@getSuccessfulDelete');
@@ -174,5 +188,6 @@ Route::get('/', function()
     // Return about us page
     return View::make('site/pages/home');
 });
+
 
 
