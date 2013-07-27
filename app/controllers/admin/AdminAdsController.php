@@ -19,13 +19,13 @@ class AdminAdsController extends AdminController {
      * Type Model
      * @var type
      */
-    protected $Type;
+    protected $type;
 
     /**
      * Inject the models.
      * @param Ad $ad
      * @param Advertiser $advertiser
-     * @param User $user
+     * @param Type $type
      */
     public function __construct(Ad $ad, Advertiser $advertiser, Type $type)
     {
@@ -221,7 +221,7 @@ class AdminAdsController extends AdminController {
 
         $ads = Ad::leftjoin('advertisers', 'advertisers.id', '=', 'ads.advertiser_id')
                         ->leftjoin('types', 'types.id', '=','ads.type_id' )
-                        ->select(array('ads.id as id', 'advertisers.id as advertiserid','types.id as typeid', 'ads.id',  'ads.name', 
+                        ->select(array('ads.id as id', 'advertisers.id as advertiserid','types.id as typeid',  'ads.name', 
                                         'ads.description', 'ads.url', 'advertisers.name as ad_creator', 'types.name as ad_type'));
 
         return Datatables::of($ads)

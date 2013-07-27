@@ -35,14 +35,7 @@ class AdsTableSeeder extends Seeder {
                 'url'         => 'www.wal-mart.com',
                 'advertiser_id'  => 4,
                 'type_id'      => 4,
-            ),              
-        	array(
-                'name'      => 'LolLogz',
-                'description' => 'I am a funny log',
-                'url'         => 'www.google.com',
-                'advertiser_id'  => 1,
-                'type_id'      => 1,
-            ),   
+            ),               
         );
 
         // Uncomment the below to run the seeder

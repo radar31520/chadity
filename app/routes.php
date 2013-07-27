@@ -23,6 +23,7 @@ Route::model('advertiser', 'Advertiser');
 Route::model('type', 'Type');
 Route::model('ad', 'Ad');
 Route::model('organization', 'Organization');
+Route::model('interaction', 'Interaction');
 
 /** ------------------------------------------
  *  Admin Routes
@@ -133,6 +134,20 @@ Route::group(array('prefix' => 'admin', 'before' => 'auth'), function()
         ->where('organization', '[0-9]+');
     Route::controller('organizations', 'AdminOrganizationsController');
 
+
+    # Interactions  Management
+    Route::get('interactions/{interaction}/show', 'AdminInteractionsController@getShow')
+        ->where('interaction', '[0-9]+');
+ //   Route::get('organizations/{organization}/edit', 'AdminOrganizationsController@getEdit')
+   //     ->where('organization', '[0-9]+');
+ //   Route::post('organizations/{organization}/edit', 'AdminOrganizationsController@postEdit')
+   //     ->where('organization', '[0-9]+');
+   // Route::get('organizations/{organization}/delete', 'AdminOrganizationsController@getDelete')
+     //   ->where('organization', '[0-9]+');
+   // Route::post('organizations/{organization}/delete', 'AdminOrganizationsController@postDelete')
+     //   ->where('organization', '[0-9]+');
+    Route::controller('interactions', 'AdminInteractionsController');
+
     #For use cases involving successful deletion of a database record
       # Admin Dashboard
     Route::get('successful-delete', 'AdminDashboardController@getSuccessfulDelete');
@@ -191,3 +206,6 @@ Route::get('/', function()
 
 
 
+
+
+Route::resource('interactions', 'InteractionsController');

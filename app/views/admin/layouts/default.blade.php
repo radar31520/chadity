@@ -103,10 +103,11 @@
 									<li{{ (Request::is('admin/roles*') ? ' class="active"' : '') }}><a href="{{{ URL::to('admin/roles') }}}"><i class="icon-user"></i> Roles</a></li>
 								</ul>
 							</li>
-							<li{{ (Request::is('admin/advertisers*') ? ' class="active"' : '') }}><a href="{{{ URL::to('admin/advertisers') }}}"><i class="icon-bullhorn icon-white"></i> Advertisers</a></li>
-							<li{{ (Request::is('admin/types*') ? ' class="active"' : '') }}><a href="{{{ URL::to('admin/types') }}}"><i class="icon-bullhorn icon-white"></i> Types</a></li>
-							<li{{ (Request::is('admin/ads*') ? ' class="active"' : '') }}><a href="{{{ URL::to('admin/ads') }}}"><i class="icon-bullhorn icon-white"></i> Ads</a></li>		
-							<li{{ (Request::is('admin/organizations*') ? ' class="active"' : '') }}><a href="{{{ URL::to('admin/organizations') }}}"><i class="icon-bullhorn icon-white"></i> Organizations</a></li>	
+							<li{{ (Request::is('admin/advertisers*') ? ' class="active"' : '') }}><a href="{{{ URL::to('admin/advertisers') }}}"><i class="icon-arrow-down icon-white"></i> Advertisers</a></li>
+							<li{{ (Request::is('admin/types*') ? ' class="active"' : '') }}><a href="{{{ URL::to('admin/types') }}}"><i class="icon-arrow-down icon-white"></i> Types</a></li>
+							<li{{ (Request::is('admin/ads*') ? ' class="active"' : '') }}><a href="{{{ URL::to('admin/ads') }}}"><i class="icon-arrow-down icon-white"></i> Ads</a></li>		
+							<li{{ (Request::is('admin/organizations*') ? ' class="active"' : '') }}><a href="{{{ URL::to('admin/organizations') }}}"><i class="icon-arrow-down icon-white"></i> Organizations</a></li>	
+							<li{{ (Request::is('admin/interactions*') ? ' class="active"' : '') }}><a href="{{{ URL::to('admin/interactions') }}}"><i class="icon-arrow-down icon-white"></i> Interactions</a></li>	
 						</ul>
 						<ul class="nav pull-right">
 							<li><a href="{{{ URL::to('/') }}}">View Homepage</a></li>

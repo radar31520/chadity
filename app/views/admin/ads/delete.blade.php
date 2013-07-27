@@ -8,7 +8,7 @@
         </ul>
     <!-- ./ tabs -->
 
-    {{-- Delete Role Form --}}
+    {{-- Delete Ad Form --}}
     <form class="form-horizontal" method="post" action="" autocomplete="off">
         <!-- CSRF Token -->
         <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
